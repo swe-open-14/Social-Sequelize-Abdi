@@ -1,5 +1,11 @@
+const {db} = require("../db/connection.js")
+const {DataTypes} = require("sequelize");
 
-let Profile;
+const Profile = db.define("profile", {
+    bio: DataTypes.STRING,
+    ProfilePicture: DataTypes.STRING,
+    birthday: DataTypes.STRING,
+});
 
 
 module.exports = Profile;
